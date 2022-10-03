@@ -1,0 +1,34 @@
+.processing-msg {
+    width: 100%;
+    text-align: center;
+    padding: 10% 0 20% 0;
+    font-size: 17px;
+}
+.processing-msg .processig-loader {
+    display: inline-block;
+    margin-top: 40px;
+}
+    .processing-msg .ajax-loading-img {
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid #555;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        webkit-animation: spincheckout 2s linear infinite;
+        animation: spincheckout 2s linear infinite;
+    }
+@keyframes spincheckout {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spincheckout {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Stdlib\CookieManagerInterface">
+        <plugin name="switch_samesite"
+                type="P3\PaymentGateway\Plugin\SwitchSameSite"
+                sortOrder="10"/>
+    </type>
+	<type name="Magento\Checkout\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="p3_paymentgateway_configprovider" xsi:type="object">P3\PaymentGateway\Model\P3PaymentGatewayConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
